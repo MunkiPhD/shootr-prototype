@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @shooter.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @shooter.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_shooter_path(@shooter) %> |
+<%= link_to 'Back', shooters_path %>
