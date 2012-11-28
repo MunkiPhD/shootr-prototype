@@ -9,5 +9,5 @@ class Match
   field :number_of_squads, type: Integer
   field :number_of_stages, type: Integer
 
-  has_many :shooters
+  has_and_belongs_to_many :shooters, :inverse_of => :matches, :class_name => 'Shooter' 
 end

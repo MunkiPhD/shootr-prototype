@@ -1,8 +1,7 @@
 ShootrPrototype::Application.routes.draw do
   resources :matches
-
-
   resources :shooters
+  match 'matches/register' => "matches#register"
 
 
   root :to => "home#index"

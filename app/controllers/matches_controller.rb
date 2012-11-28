@@ -14,6 +14,7 @@ class MatchesController < ApplicationController
   # GET /matches/1.json
   def show
     @match = Match.find(params[:id])
+    @shooters = Shooter.where(:match_ids.nin => [@match.id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -35,6 +36,14 @@ class MatchesController < ApplicationController
   # GET /matches/1/edit
   def edit
     @match = Match.find(params[:id])
+  end
+
+  def register
+    @match = Match.find(params[:match_id])
+    @shooter = Shooter.find(params[:shooter_id])
+    @match.shooters.push(@shooter)
+
+    redirect_to @match
   end
 
   # POST /matches

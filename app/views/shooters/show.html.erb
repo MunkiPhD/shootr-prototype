@@ -10,6 +10,12 @@
   <%= @shooter.email %>
 </p>
 
+Matches:
+<ul>
+  <% @shooter.matches.each do |match| %>
+    <li><%= match.name %>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_shooter_path(@shooter) %> |
 <%= link_to 'Back', shooters_path %>
