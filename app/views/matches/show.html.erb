@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @match.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @match.date %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @match.time %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @match.type %>
+</p>
+
+<p>
+  <b>Number of squads:</b>
+  <%= @match.number_of_squads %>
+</p>
+
+<p>
+  <b>Number of stages:</b>
+  <%= @match.number_of_stages %>
+</p>
+
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>

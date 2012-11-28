@@ -1,4 +1,7 @@
 ShootrPrototype::Application.routes.draw do
+  resources :matches
+
+
   resources :shooters
 
 
