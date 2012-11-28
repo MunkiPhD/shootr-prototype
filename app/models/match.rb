@@ -8,4 +8,6 @@ class Match
   field :type, type: String
   field :number_of_squads, type: Integer
   field :number_of_stages, type: Integer
+
+  has_many :shooters
 end
